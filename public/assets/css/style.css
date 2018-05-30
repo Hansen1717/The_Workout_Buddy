@@ -1,0 +1,23 @@
+#logo {
+    font-size: 18px;
+}
+
+#panel-header {
+    font-size: 16px;
+}
+
+.panel-heading {
+    padding: 1px 1px;
+}
+
+.panel-body {
+    padding-top: 10%;
+}
+
+.dropdown-menu {
+    left: 20%;
+}
+
+.dropdown{
+    margin-bottom: 10%;
+}
