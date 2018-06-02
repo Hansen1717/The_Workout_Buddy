@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var scheduleParams = {
         dow: "",
-        muscleGroup: ""
+        muscleGroup: "",
+        dayOfTheWeek: ""
     };
 
     var workouts = {
@@ -18,12 +19,20 @@ $(document).ready(function () {
           .then(
             console.log('workout inserted')
           );
-      }
+      };
+
+      function upsertSchedule(scheduleData) {
+          $.post("api/schedulegen", scheduleData)
+            .then(
+                console.log("schedule inserted")
+            );
+      };
 
 
     $("a").on("click", function () {
         if ($(this).attr("id") === "DOW") {
             scheduleParams.dow = $(this).attr("value");
+            scheduleParams.dayOfTheWeek = $(this).text();
             console.log(scheduleParams);
             $("#dowButton").text($(this).text());
         }
@@ -46,15 +55,22 @@ $(document).ready(function () {
             $("#validation-label").attr("hidden", false);
             return;
         };
-        var day = scheduleParams.dow;
+        var dayId = scheduleParams.dow;
+        var day = scheduleParams.dayOfTheWeek;
         var workout = "workouts." + scheduleParams.muscleGroup.toLowerCase();
+        var newScheduleDay = {
+            day_id: dayId,
+            day_of_week: day
+        }
+        console.log(newScheduleDay)
+        upsertSchedule(newScheduleDay);
         console.log(eval(workout).length);
         for (var i = 0; i < eval(workout).length; i++) {
             var newWorkout = {
-                dow: day,
+                day_id: dayId,
                 workout: eval(workout)[i]
             }
             upsertWorkout(newWorkout);
-}
+        }
     })
 })

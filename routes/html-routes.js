@@ -17,4 +17,12 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/workout_generation.html"));
   });
 
+  app.get("/schedule", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/schedule.html"));
+  });
+
+  app.get("/workouts", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/workouts.html"));
+  });
+
 };
