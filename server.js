@@ -29,6 +29,7 @@ app.use(express.static("public"));
 // =============================================================
 require("./routes/html-routes.js")(app);
 require("./routes/workout_gen.js")(app);
+require("./routes/schedule.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
