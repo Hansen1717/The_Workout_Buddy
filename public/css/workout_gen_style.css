@@ -1,0 +1,33 @@
+body {
+    background-color: #5CDB95
+}
+
+.blue-heading {
+    background-color: #05386B;
+}
+
+.header-text {
+    color: #EDF5E1;
+    font-size: 16px;
+}
+
+.panel {
+    margin: 20% 5%;
+}
+
+.panel-heading {
+    padding: 1px 1px;
+}
+
+.panel-body {
+    padding-top: 10%;
+    background-color: #EDF5E1; 
+}
+
+.dropdown-menu {
+    left: 20%;
+}
+
+.dropdown{
+    margin-bottom: 10%;
+}
