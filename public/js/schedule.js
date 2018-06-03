@@ -11,19 +11,9 @@ var panelDays = $('#panelDays');
     //Need to add code to push new days in array
 
  // Function for creating a new list row for authors
-  function createDayButton() {
-    console.log('Is running');
-    var newButton = $("<button>");
-
-    for (var i = 0; i < dayOfWeek.length; i++) {
-
-    panelDays.prepend("<button class='dropdown btn-primary btn-lg btn-block'>" + dayOfWeek[i] + "</button><br>");
-    newButton.attr("value", day_id[i]);
-
-    }
-  }
-
+  
  function getDayButton() {
+    console.log('Working');
         $.get("/api/schedule", function(data) {
             console.log(data);
       for (var i = 0; i < data.length; i++) {
@@ -32,6 +22,20 @@ var panelDays = $('#panelDays');
       }
     });
  }
+
+  function createDayButton() {
+    console.log('Is running');
+
+    for (var i = 0; i < dayOfWeek.length; i++) {
+    
+    var newButton = $("<button class='dropdown btn-primary btn-lg btn-block'>" + dayOfWeek[i] + "</button><br>");
+    newButton.attr("value", day_id[i]);
+    panelDays.prepend(newButton);
+
+    }
+  }
+
+
 
 getDayButton();
 createDayButton();
