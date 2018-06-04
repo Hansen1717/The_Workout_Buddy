@@ -2,17 +2,33 @@ body {
     background-color: #5CDB95
 }
 
+a {
+    color: #05386B;
+}
+
 .blue-heading {
     background-color: #05386B;
 }
 
-.header-text {
-    color: #EDF5E1;
-    font-size: 16px;
+.navbar-inverse .navbar-toggle {
+    background-color: #EDF5E1;
 }
 
-.panel {
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #EDF5E1;
+}
+
+.navbar-inverse .navbar-brand, .header-text {
+    color: #EDF5E1;
+    font-size: 18px;
+}
+
+.panel-generate {
     margin: 20% 5%;
+}
+
+.panel-schedule {
+    margin: 3% 5%;
 }
 
 .panel-heading {
@@ -30,4 +46,24 @@ body {
 
 .dropdown{
     margin-bottom: 10%;
+}
+
+.btn-primary {
+    background-color: #05386B;
+    border-color: #011120;
+}
+
+.btn-success {
+    background-color: #9068be;
+    border-color: #05386B;
+}
+
+.btn-success:hover {
+    background-color: #654986;
+    border-color: #05386B;    
+}
+
+.btn-success:active:hover {
+    background-color: #654986;
+    border-color: #05386B;    
 }

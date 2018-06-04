@@ -14,7 +14,7 @@ module.exports = function(app) {
     })
   });
 
-  app.delete("/api/workoutdel/:id" ,function(req,res) {
+  app.delete("/api/scheddel/:id" ,function(req,res) {
     db.schedule.destroy({
       where: {day_id: req.params.id}
     })
@@ -22,4 +22,16 @@ module.exports = function(app) {
       res.json(dbSchedule);
     });
   });
+
+  app.delete("/api/workoutdel/:id" ,function(req,res) {
+    db.workouts.destroy({
+      where: {day_id: req.params.id}
+    })
+    .then(function(dbSchedule) {
+      res.json(dbSchedule);
+    });
+  });
+
 };
+
+

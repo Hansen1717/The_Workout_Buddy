@@ -13,18 +13,23 @@
     <script src="js/workoutGen.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid blue-heading">
-            <h1 class="align-left header-text">My Workout Buddy</h1>
-        </div>
-    </nav>
-    <div class="panel">
+        <nav class="navbar navbar-inverse">
+                <div class="container-fluid blue-heading">
+                  <div class="navbar-header">
+                    <a href="/schedule"><button type="button" class="navbar-toggle">
+                        <i class="glyphicon glyphicon-home"></i>
+                    </button></a>
+                    <a class="navbar-brand" href="#">My Workout Buddy</a>
+                  </div>
+                </div>
+              </nav>
+    <div class="panel panel-generate">
             <div class="blue-heading panel-heading text-center">
                 <h1 class="header-text">Create A Workout</h1>
             </div>
             <div class="panel-body text-center">
                     <div class="dropdown">
-                            <button id="dowButton" class="btn btn-default dropdown-toggle" value="" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button id="dowButton" class="btn btn-primary btn-block dropdown-toggle" value="" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                               Select a Day of the Week
                               <span class="caret"></span>
                             </button>
@@ -46,7 +51,7 @@
                     </div>
 
                     <div class="dropdown">
-                            <button id="mgButton" class="btn btn-default dropdown-toggle" value="" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <button id="mgButton" class="btn btn-primary btn-block dropdown-toggle" value="" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                               Choose A Muscle Group
                               <span class="caret"></span>
                             </button>
@@ -65,7 +70,7 @@
                             </ul>
                     </div>
 
-                    <button id="create-workout" class="btn btn-default">Generate Workout</button>
+                    <button id="create-workout" class="btn btn-success">Generate Workout</button>
                     <label id="validation-label" hidden="true" for="create-workout"></label>
 
             </div>
