@@ -10,7 +10,16 @@ module.exports = function(app) {
 
   app.post("/api/schedulegen", function (req, res) {
     db.schedule.create(req.body).then(function(dbSchedule) {
-      res.json(dbSchedule)
+      res.json(dbSchedule);
     })
-  })
+  });
+
+  app.delete("/api/workoutdel/:id" ,function(req,res) {
+    db.schedule.destroy({
+      where: {day_id: req.params.id}
+    })
+    .then(function(dbSchedule) {
+      res.json(dbSchedule);
+    });
+  });
 };

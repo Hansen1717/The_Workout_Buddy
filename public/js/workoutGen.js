@@ -14,19 +14,29 @@ $(document).ready(function () {
         shoulders:["Military Press","Shoulder Press, on Machine","Lateral Raises","Front Raises","Shrugs"]
     }
 
-    function upsertWorkout(workoutData) {
+    function insertWorkout(workoutData) {
         $.post("/api/workoutgen", workoutData)
           .then(
             console.log('workout inserted')
           );
       };
 
-      function upsertSchedule(scheduleData) {
-          $.post("api/schedulegen", scheduleData)
+      function insertSchedule(scheduleData) {
+          $.post("/api/schedulegen", scheduleData)
             .then(
                 console.log("schedule inserted")
             );
       };
+
+      function deleteBeforeInsert(dayId) {
+          $.ajax({
+              method: "DELETE",
+              url: "/api/workoutdel/" + dayId
+          })
+          .then(
+              console.log("Workouts for dayId " + dayId + " have been deleted")
+          )
+      }
 
 
     $("a").on("click", function () {
@@ -62,15 +72,16 @@ $(document).ready(function () {
             day_id: dayId,
             day_of_week: day
         }
-        console.log(newScheduleDay)
-        upsertSchedule(newScheduleDay);
+        deleteBeforeInsert(dayId);
+        console.log(newScheduleDay);
+        insertSchedule(newScheduleDay);
         console.log(eval(workout).length);
         for (var i = 0; i < eval(workout).length; i++) {
             var newWorkout = {
                 day_id: dayId,
                 workout: eval(workout)[i]
             }
-            upsertWorkout(newWorkout);
+            insertWorkout(newWorkout);
         }
     })
 })
