@@ -35,6 +35,10 @@ a {
     padding: 1px 1px;
 }
 
+.panel-title {
+    padding: 3% 0;
+}
+
 .panel-body {
     padding-top: 10%;
     background-color: #EDF5E1; 

@@ -14,4 +14,20 @@ module.exports = function(app) {
 
   });
 
+  app.get("/api/workouts/:id", function(req, res) {
+
+    db.workouts.findAll({
+      where: {
+        day_id: req.params.id
+      },
+      order: [
+        ['id', 'DESC']
+      ]
+    }).then(function(dbschedule) {
+      res.json(dbschedule);
+    });
+
+  });
+
+
 };

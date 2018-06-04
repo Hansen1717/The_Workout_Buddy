@@ -6,12 +6,12 @@ $(document).ready(function () {
     };
 
     var workouts = {
-        abs: ["Sit-Ups", "Reverse Crunches", "Sitting Twists", "High Crunches", "Knee To Elbow Crunches", "Plank"],
-        arms: ["Barbell Curls", "French Press SZ-Bar", "Hammer Curls", "Tricep Cable Extensions", "Dumbbell Incline Curl", "Dips"],
-        back: ["Deadlifts", "Bent Over Barbell Row", "Lat Pull Down", "Cable Row", "Hyperextensions", "Pullups"],
-        chest: ["Bench Press", "Incline Dumbell Press", "Decline Bench Press Barbell", "Incline Dumbbell Flye", "Fly with Cable", "Pushups"],
-        legs: ["Squats", "Front Squats", "Dumbbell Lunges Walking", "Leg Presses", "Leg Extension", "Leg Curls", "Calf Raises"],
-        shoulders: ["Military Press", "Shoulder Press, on Machine", "Lateral Raises", "Front Raises", "Shrugs"]
+        abs: ["Sit-Ups", "Leg Raises, StandingCrunches", "Crunches", "Leg Raises, Lying", "Side Plank", "Plank"],
+        arms: ["Biceps Curls With Barbell", "French Press (skullcrusher) SZ-bar", "Hammercurls", "Triceps Extensions on Cable", "Dumbbell Incline Curl", "Dips"],
+        back: ["Deadlifts", "Bent Over Barbell Row", "Lat Pull Down (Straight Back)", "Rowing, T-bar", "Hyperextensions", "Pull-ups"],
+        chest: ["Bench Press", "Incline Dumbbell Press", "Decline Bench Press Barbell", "Incline Dumbbell Flye", "Butterfly", "Push Ups"],
+        legs: ["Squats", "Front Squats", "Dumbbell Lunges Walking", "Leg Presses (wide)", "Leg Extension", "Leg Curls (laying)", "Standing Calf Raises"],
+        shoulders: ["Military Press", "Shoulder Press, on Machine", "Lateral Raises", "Shrugs, Dumbbells", "Front Raises", "Shrugs, Barbells"]
     }
 
     function insertWorkout(workoutData) {
