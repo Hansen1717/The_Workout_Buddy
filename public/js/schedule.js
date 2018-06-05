@@ -6,6 +6,8 @@ $(document).ready(function () {
 
   var dayOfWeek = [];
 
+  sessionStorage.setItem('workouts', '');
+
   function getDayButton() {
     $.get("/api/schedule", function (data) {
       console.log(data)

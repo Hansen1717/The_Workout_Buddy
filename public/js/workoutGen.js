@@ -6,7 +6,7 @@ $(document).ready(function () {
     };
 
     var workouts = {
-        abs: ["Sit-Ups", "Leg Raises, StandingCrunches", "Crunches", "Leg Raises, Lying", "Side Plank", "Plank"],
+        abs: ["Sit-Ups", "Leg Raises, Standing", "Crunches", "Leg Raises, Lying", "Side Plank", "Plank"],
         arms: ["Biceps Curls With Barbell", "French Press (skullcrusher) SZ-bar", "Hammercurls", "Triceps Extensions on Cable", "Dumbbell Incline Curl", "Dips"],
         back: ["Deadlifts", "Bent Over Barbell Row", "Lat Pull Down (Straight Back)", "Rowing, T-bar", "Hyperextensions", "Pull-ups"],
         chest: ["Bench Press", "Incline Dumbbell Press", "Decline Bench Press Barbell", "Incline Dumbbell Flye", "Butterfly", "Push Ups"],
