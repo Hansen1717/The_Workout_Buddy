@@ -5,6 +5,8 @@ $(document).ready(function () {
         dayOfTheWeek: ""
     };
 
+    var workoutDescripton = [];
+
     var workouts = {
         abs: ["Sit-Ups", "Leg Raises, Standing", "Crunches", "Leg Raises, Lying", "Side Plank", "Plank"],
         arms: ["Biceps Curls With Barbell", "French Press (skullcrusher) SZ-bar", "Hammercurls", "Triceps Extensions on Cable", "Dumbbell Incline Curl", "Dips"],
@@ -94,10 +96,26 @@ $(document).ready(function () {
             }
             insertWorkout(newWorkout);
         }
+        workoutDescripton.push(scheduleParams.dayOfTheWeek);
+        workoutDescripton.push(scheduleParams.muscleGroup);
+        $("#workout-created-label").text("A " + workoutDescripton[1] + " workout for " + workoutDescripton[0] + " has been created!")
+        $("#generated").attr("style","visibility: visible")
         scheduleParams.dow = "";
         scheduleParams.dayOfTheWeek = "";
         $("#dowButton").text("Select a Day of the Week");
         $("#mgButton").text("Choose A Muscle Group");
 
     })
+
+    $("#create-new-workout").on("click", function(){
+        workoutDescripton = [];
+        $("#generated").attr("style","visibility: hidden");        
+    });
+
+    $("#schedule-button").on("click", function(){
+        workoutDescripton = [];
+        $("#generated").attr("style","visibility: hidden");        
+    })
+
+
 })

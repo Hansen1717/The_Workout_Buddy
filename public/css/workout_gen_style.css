@@ -71,3 +71,17 @@ a {
     background-color: #654986;
     border-color: #05386B;    
 }
+
+#generated {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+}
+
+#generated-panel {
+    background-color: #011120;
+}
+
+#workout-created-label {
+    color: #EDF5E1;
+}
